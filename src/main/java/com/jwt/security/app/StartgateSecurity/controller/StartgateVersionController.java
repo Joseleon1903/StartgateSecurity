@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/v1/version")
 @RequiredArgsConstructor
-public class StargateVersionController {
+public class StartgateVersionController {
 
     @GetMapping
     public ResponseEntity<String> getVersion(){
-        return ResponseEntity.ok("StarGate Version 0.0.1");
+        return ResponseEntity.ok("Startgate Version 0.0.1");
     }
 
 }

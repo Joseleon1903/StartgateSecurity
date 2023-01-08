@@ -42,6 +42,9 @@ public class JwtServiceImpl implements JwtService{
 
     @Override
     public String generatedToken(Map<String, Objects> extraClaims, UserDetails userDetails){
+        System.out.println("Entering generatedToken");
+        System.out.println("subject "+userDetails.getUsername());
+
         return Jwts.builder().setClaims(extraClaims)
                 .setSubject(userDetails.getUsername())
                 .setIssuedAt(new Date(System.currentTimeMillis()))
